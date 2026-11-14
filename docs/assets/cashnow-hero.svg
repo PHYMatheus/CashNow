@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 380" width="1280" height="380">
+<defs>
+  <linearGradient id="brand" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#00C389"/><stop offset="55%" stop-color="#2EE59D"/><stop offset="100%" stop-color="#C6FF3D"/></linearGradient>
+  <linearGradient id="brandH" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00C389"/><stop offset="55%" stop-color="#2EE59D"/><stop offset="100%" stop-color="#C6FF3D"/></linearGradient>
+  <linearGradient id="bolt" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFF6B0"/><stop offset="45%" stop-color="#FFD23F"/><stop offset="100%" stop-color="#FF9F1C"/></linearGradient>
+  <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.55"/><stop offset="40%" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
+  <linearGradient id="bgV" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#14213D"/><stop offset="100%" stop-color="#050814"/></linearGradient>
+  <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2EE59D" stop-opacity="0.30"/><stop offset="100%" stop-color="#2EE59D" stop-opacity="0"/></linearGradient>
+  <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+    <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.85"/>
+    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    <animateTransform attributeName="gradientTransform" type="translate" values="-1.2 0; 1.2 0; 1.2 0" keyTimes="0;0.45;1" dur="4.5s" begin="1.6s" repeatCount="indefinite"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0%" stop-color="#2EE59D" stop-opacity="0.55"/><stop offset="100%" stop-color="#2EE59D" stop-opacity="0"/></radialGradient>
+  <radialGradient id="glowGold" cx="0.5" cy="0.5" r="0.5"><stop offset="0%" stop-color="#FFD23F" stop-opacity="0.9"/><stop offset="100%" stop-color="#FFD23F" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M40 0 L0 0 0 40" fill="none" stroke="#2A3A5E" stroke-width="1" stroke-opacity="0.45"/>
+  </pattern>
+  <clipPath id="frame"><rect width="1280" height="380" rx="28"/></clipPath>
+  <mask id="fadeMask"><rect width="1280" height="380" fill="url(#maskGrad)"/></mask>
+  <linearGradient id="maskGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0.15"/><stop offset="0.55" stop-color="#fff" stop-opacity="0.5"/><stop offset="1" stop-color="#fff" stop-opacity="1"/></linearGradient>
+  <path id="trend" d="M780 338 C820 330 845 318 880 320 S945 292 985 294 S1045 248 1085 252 S1140 200 1180 204 S1240 128 1290 104"/>
+  <style>
+    .grid   { animation: drift 8s linear infinite; }
+    @keyframes drift { from { transform: translate(0,0); } to { transform: translate(-40px,-40px); } }
+
+    .line   { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: draw 2.6s 0.4s cubic-bezier(.6,.1,.2,1) forwards; }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    .area   { opacity: 0; animation: fadeIn 1.2s 2.4s ease forwards; }
+
+    .icon   { opacity: 0; transform-box: fill-box; transform-origin: center; animation: pop .9s .1s cubic-bezier(.2,1.6,.4,1) forwards; }
+    @keyframes pop { 0% { opacity: 0; transform: scale(.4) rotate(-20deg); } 100% { opacity: 1; transform: scale(1) rotate(0); } }
+
+    .halo   { transform-box: fill-box; transform-origin: center; animation: breathe 3s ease-in-out infinite; }
+    @keyframes breathe { 0%,100% { transform: scale(.9); opacity: .55; } 50% { transform: scale(1.12); opacity: 1; } }
+
+    .ring   { transform-box: fill-box; transform-origin: center; animation: ripple 3s ease-out infinite; }
+    .ring.r2 { animation-delay: 1.5s; }
+    @keyframes ripple { 0% { transform: scale(.85); opacity: .7; } 100% { transform: scale(1.55); opacity: 0; } }
+
+    .flash  { opacity: 0; animation: flash 3.6s 1.2s infinite; }
+    @keyframes flash { 0%,86%,100% { opacity: 0; } 88% { opacity: .95; } 90% { opacity: .1; } 92% { opacity: .8; } 95% { opacity: 0; } }
+
+    .badge  { transform-box: fill-box; transform-origin: center; animation: nudge 3.6s 1.2s infinite; }
+    @keyframes nudge { 0%,84%,100% { transform: scale(1); } 89% { transform: scale(1.25); } 94% { transform: scale(.95); } }
+
+    .word   { opacity: 0; animation: rise .8s .5s cubic-bezier(.2,.9,.3,1) forwards; }
+    .tag    { opacity: 0; animation: rise .8s 1.0s cubic-bezier(.2,.9,.3,1) forwards; }
+    .chip1  { opacity: 0; animation: rise .6s 1.4s ease forwards; }
+    .chip2  { opacity: 0; animation: rise .6s 1.6s ease forwards; }
+    .chip3  { opacity: 0; animation: rise .6s 1.8s ease forwards; }
+    @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeIn { to { opacity: 1; } }
+
+    .coin   { opacity: 0; animation: float 6s linear infinite; }
+    .c2 { animation-delay: 1.2s; } .c3 { animation-delay: 2.4s; } .c4 { animation-delay: 3.6s; } .c5 { animation-delay: 4.8s; }
+    @keyframes float { 0% { opacity: 0; transform: translateY(40px); } 15% { opacity: .9; } 80% { opacity: .5; } 100% { opacity: 0; transform: translateY(-170px); } }
+
+    .dot    { opacity: 0; animation: fadeIn .3s 2.9s forwards; }
+    .pill   { opacity: 0; animation: rise .5s 3.1s ease forwards; }
+
+    .spark  { animation: twinkle 2.4s ease-in-out infinite; }
+    .s2 { animation-delay: .8s; } .s3 { animation-delay: 1.6s; }
+    @keyframes twinkle { 0%,100% { opacity: .15; } 50% { opacity: 1; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .icon,.word,.tag,.chip1,.chip2,.chip3,.area,.dot,.pill { opacity: 1 !important; }
+      .line { stroke-dashoffset: 0 !important; }
+    }
+  </style>
+</defs>
+
+<g clip-path="url(#frame)">
+  <!-- Fundo -->
+  <rect width="1280" height="380" fill="url(#bgV)"/>
+  <g mask="url(#fadeMask)"><rect class="grid" x="0" y="0" width="1360" height="460" fill="url(#grid)"/></g>
+  <circle cx="1150" cy="60" r="260" fill="url(#glow)" opacity="0.35"/>
+  <circle cx="160" cy="190" r="200" fill="url(#glow)" opacity="0.25"/>
+
+  <!-- Gráfico subindo -->
+  <path class="area" d="M780 338 C820 330 845 318 880 320 S945 292 985 294 S1045 248 1085 252 S1140 200 1180 204 S1240 128 1290 104 L1290 380 L780 380 Z" fill="url(#chartFill)"/>
+  <use href="#trend" class="line" fill="none" stroke="url(#brandH)" stroke-width="5" stroke-linecap="round"/>
+
+  <g class="dot">
+    <circle r="22" fill="url(#glowGold)">
+      <animateMotion dur="5s" begin="3s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#trend"/></animateMotion>
+    </circle>
+    <circle r="7" fill="#FFD23F" stroke="#0B1226" stroke-width="3">
+      <animateMotion dur="5s" begin="3s" repeatCount="indefinite"><mpath href="#trend"/></animateMotion>
+    </circle>
+  </g>
+
+  <!-- Indicador de saldo -->
+  <g transform="translate(1078 30)"><g class="pill">
+    <rect width="168" height="44" rx="22" fill="#14213D" stroke="#2A3A5E" stroke-width="2"/>
+    <path d="M22 28 L30 16 L38 28 Z" fill="#2EE59D"/>
+    <text x="50" y="29" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">+ 24,8%</text>
+    <text x="128" y="29" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#8A97B4">mês</text>
+  </g></g>
+
+  <!-- Moedas flutuando -->
+  <g font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="800" font-size="15" text-anchor="middle">
+    <g transform="translate(820 330)"><g class="coin c1"><circle r="16" fill="#0B1226" stroke="#2EE59D" stroke-width="2.5"/><text y="5" fill="#2EE59D">R$</text></g></g>
+    <g transform="translate(920 345)"><g class="coin c2"><circle r="13" fill="#0B1226" stroke="#C6FF3D" stroke-width="2.5"/><text y="5" font-size="12" fill="#C6FF3D">R$</text></g></g>
+    <g transform="translate(1020 335)"><g class="coin c3"><circle r="16" fill="#0B1226" stroke="#FFD23F" stroke-width="2.5"/><text y="5" fill="#FFD23F">R$</text></g></g>
+    <g transform="translate(1120 345)"><g class="coin c4"><circle r="12" fill="#0B1226" stroke="#2EE59D" stroke-width="2.5"/><text y="4" font-size="11" fill="#2EE59D">R$</text></g></g>
+    <g transform="translate(1220 330)"><g class="coin c5"><circle r="15" fill="#0B1226" stroke="#C6FF3D" stroke-width="2.5"/><text y="5" fill="#C6FF3D">R$</text></g></g>
+  </g>
+
+  <!-- Faíscas -->
+  <g fill="#C6FF3D">
+    <path class="spark"    transform="translate(300 70)"  d="M0 -9 L2 -2 L9 0 L2 2 L0 9 L-2 2 L-9 0 L-2 -2 Z"/>
+    <path class="spark s2" transform="translate(70 300)"  d="M0 -7 L1.6 -1.6 L7 0 L1.6 1.6 L0 7 L-1.6 1.6 L-7 0 L-1.6 -1.6 Z"/>
+    <path class="spark s3" transform="translate(520 58)"  d="M0 -6 L1.4 -1.4 L6 0 L1.4 1.4 L0 6 L-1.4 1.4 L-6 0 L-1.4 -1.4 Z" fill="#FFD23F"/>
+  </g>
+
+  <!-- Ícone -->
+  <g transform="translate(160 190)">
+    <circle class="halo" r="150" fill="url(#glow)"/>
+    <rect class="ring"    x="-112" y="-112" width="224" height="224" rx="62" fill="none" stroke="#2EE59D" stroke-width="2"/>
+    <rect class="ring r2" x="-112" y="-112" width="224" height="224" rx="62" fill="none" stroke="#C6FF3D" stroke-width="2"/>
+    <g class="icon">
+      <g transform="scale(0.78)">
+        <rect x="-140" y="-140" width="280" height="280" rx="78" fill="url(#brand)"/>
+        <rect x="-140" y="-140" width="280" height="280" rx="78" fill="url(#shine)"/>
+        <rect x="-128" y="-128" width="256" height="256" rx="68" fill="none" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="2"/>
+        <path d="M62 -58 A88 88 0 1 0 62 58" fill="none" stroke="#06261C" stroke-width="34" stroke-linecap="round"/>
+        <path d="M62 -58 A88 88 0 1 0 62 58" fill="none" stroke="#2EE59D" stroke-opacity="0.35" stroke-width="3" stroke-dasharray="2 12" stroke-linecap="round">
+          <animate attributeName="stroke-dashoffset" from="0" to="-56" dur="2s" repeatCount="indefinite"/>
+        </path>
+        <path d="M22 -112 L-44 12 L2 12 L-18 112 L58 -20 L12 -20 Z" fill="url(#bolt)" stroke="#06261C" stroke-width="7" stroke-linejoin="round"/>
+        <path class="flash" d="M22 -112 L-44 12 L2 12 L-18 112 L58 -20 L12 -20 Z" fill="#FFFFFF"/>
+        <g transform="translate(112 -112)"><g class="badge"><circle r="30" fill="#0B1226" stroke="url(#brand)" stroke-width="5"/><rect x="-5" y="-17" width="10" height="21" rx="5" fill="#C6FF3D"/><circle cy="13" r="5.5" fill="#C6FF3D"/></g></g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Wordmark -->
+  <g class="word">
+    <text x="320" y="196" font-family="Poppins, Montserrat, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="112" font-weight="800" letter-spacing="-3" fill="#FFFFFF">Cash<tspan fill="url(#brandH)">Now</tspan><tspan fill="url(#bolt)">!</tspan></text>
+    <text x="320" y="196" font-family="Poppins, Montserrat, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="112" font-weight="800" letter-spacing="-3" fill="url(#sweep)" opacity="0.55">CashNow!</text>
+  </g>
+
+  <!-- Tagline -->
+  <text class="tag" x="324" y="244" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="25" font-weight="500" fill="#C9D3E6">Suas finanças na velocidade do <tspan fill="#FFD23F" font-weight="700">raio</tspan>.</text>
+
+  <!-- Chips -->
+  <g font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="700">
+    <g transform="translate(324 272)"><g class="chip1"><rect width="134" height="38" rx="19" fill="#2EE59D" fill-opacity="0.12" stroke="#2EE59D" stroke-opacity="0.6"/><circle cx="20" cy="19" r="5" fill="#2EE59D"/><text x="34" y="25" fill="#2EE59D">Receitas</text></g></g>
+    <g transform="translate(470 272)"><g class="chip2"><rect width="140" height="38" rx="19" fill="#FF5C7A" fill-opacity="0.12" stroke="#FF5C7A" stroke-opacity="0.6"/><circle cx="20" cy="19" r="5" fill="#FF5C7A"/><text x="34" y="25" fill="#FF5C7A">Despesas</text></g></g>
+    <g transform="translate(622 272)"><g class="chip3"><rect width="110" height="38" rx="19" fill="#FFD23F" fill-opacity="0.12" stroke="#FFD23F" stroke-opacity="0.6"/><circle cx="20" cy="19" r="5" fill="#FFD23F"/><text x="34" y="25" fill="#FFD23F">Metas</text></g></g>
+  </g>
+
+  <rect width="1280" height="380" rx="28" fill="none" stroke="#2A3A5E" stroke-width="2"/>
+</g>
+</svg>
