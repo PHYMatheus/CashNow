@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+<defs>
+  <linearGradient id="brand" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#00C389"/><stop offset="55%" stop-color="#2EE59D"/><stop offset="100%" stop-color="#C6FF3D"/></linearGradient>
+  <linearGradient id="brandH" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00C389"/><stop offset="55%" stop-color="#2EE59D"/><stop offset="100%" stop-color="#C6FF3D"/></linearGradient>
+  <linearGradient id="bolt" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFF6B0"/><stop offset="45%" stop-color="#FFD23F"/><stop offset="100%" stop-color="#FF9F1C"/></linearGradient>
+  <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.55"/><stop offset="40%" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
+  <linearGradient id="bgV" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#14213D"/><stop offset="100%" stop-color="#050814"/></linearGradient>
+  <linearGradient id="card" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#00C389"/><stop offset="60%" stop-color="#2EE59D"/><stop offset="100%" stop-color="#C6FF3D"/></linearGradient>
+  <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2EE59D" stop-opacity="0.35"/><stop offset="100%" stop-color="#2EE59D" stop-opacity="0"/></linearGradient>
+</defs>
+<g id="Logo / Ícone" transform="translate(256 256) scale(1.4286)">
+  <rect id="Base" x="-140" y="-140" width="280" height="280" rx="78" fill="url(#brand)"/>
+  <rect id="Brilho" x="-140" y="-140" width="280" height="280" rx="78" fill="url(#shine)"/>
+  <rect x="-128" y="-128" width="256" height="256" rx="68" fill="none" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="2"/>
+  <path id="C Moeda" d="M62 -58 A88 88 0 1 0 62 58" fill="none" stroke="#06261C" stroke-width="34" stroke-linecap="round"/>
+  <path d="M62 -58 A88 88 0 1 0 62 58" fill="none" stroke="#2EE59D" stroke-opacity="0.35" stroke-width="3" stroke-dasharray="2 12" stroke-linecap="round"/>
+  <path id="Raio" d="M22 -112 L-44 12 L2 12 L-18 112 L58 -20 L12 -20 Z" fill="url(#bolt)" stroke="#06261C" stroke-width="7" stroke-linejoin="round"/>
+  <g id="Badge" transform="translate(112 -112)"><circle r="30" fill="#0B1226" stroke="url(#brand)" stroke-width="5"/><rect x="-5" y="-17" width="10" height="21" rx="5" fill="#C6FF3D"/><circle cy="13" r="5.5" fill="#C6FF3D"/></g>
+</g>
+</svg>
